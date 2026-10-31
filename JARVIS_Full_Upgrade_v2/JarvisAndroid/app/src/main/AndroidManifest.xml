@@ -1,0 +1,39 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <queries>
+        <package android:name="com.google.android.youtube"/>
+        <package android:name="com.android.chrome"/>
+        <package android:name="com.google.android.apps.chrome"/>
+        <package android:name="com.android.camera"/>
+        <package android:name="com.google.android.GoogleCamera"/>
+        <package android:name="com.google.android.apps.maps"/>
+        <package android:name="com.google.android.gm"/>
+        <package android:name="com.android.vending"/>
+        <package android:name="com.google.android.calculator"/>
+        <package android:name="com.android.calculator2"/>
+        <package android:name="com.google.android.dialer"/>
+        <package android:name="com.android.dialer"/>
+        <package android:name="com.google.android.apps.messaging"/>
+        <package android:name="com.android.mms"/>
+    </queries>
+    <application
+        android:allowBackup="false"
+        android:label="JARVIS"
+        android:theme="@android:style/Theme.Material.Light.NoActionBar"
+        android:usesCleartextTraffic="false">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <service android:name=".FloatingService" android:exported="false"/>
+    </application>
+</manifest>
